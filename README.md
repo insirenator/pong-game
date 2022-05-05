@@ -2,12 +2,12 @@
 ### Execute *main.py* to run the game
 ### Controls:
 **Left paddle:**
-*W - Up*
-*S - Down*
+1.*W - Up*
+2.*S - Down*
 
 **Right paddle:**
-*Arrow up: Up*
-*Arrow down: Down*
+1.*Arrow_up - Up*
+2.*Arrow_down - Down*
 
 You must install pygame module first to run this code.
 To install pygame:
