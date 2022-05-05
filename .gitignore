@@ -1,0 +1,4 @@
+__pycache__/
+assets/
+*.py[cod]
+*.exe
