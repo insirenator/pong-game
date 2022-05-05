@@ -1,3 +1,8 @@
+'''
+Components for the Pong Game 
+i.e. Paddle and Ball
+'''
+
 import pygame
 import os
 

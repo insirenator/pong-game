@@ -1,3 +1,9 @@
+'''
+Pong Game in Python using Pygame Module
+Created by : Shakeeb Arsalaan
+Dated : 05-04-2022
+'''
+
 import pygame
 from random import choice
 
@@ -5,6 +11,7 @@ from components import Paddle
 from components import Ball
 from components import GAME_OVER_IMG
 
+# Colors
 WHITE = (255,255,255)
 BLACK = (0,0,0)
 
@@ -44,13 +51,14 @@ class Pong:
 		self.tf_y = choice([1,-1])
 
 	def display_score(self):
+		'''Display the scores of the players'''
 		self.right_score = self.FONT.render(str(self.right_hits), True, WHITE, BLACK)
 		self.left_score = self.FONT.render(str(self.left_hits), True, WHITE, BLACK)
 		self.SCREEN.blit(self.left_score, self.l_text_rect)
 		self.SCREEN.blit(self.right_score, self.r_text_rect)
 
 	def draw_center_border(self):
-		pygame.draw.rect(self.SCREEN, (255,255,255), self.center_border)
+		pygame.draw.rect(self.SCREEN, WHITE, self.center_border)
 
 	def handle_movement(self, key_pressed):
 		'''Respond to the keys pressed'''
@@ -98,6 +106,7 @@ class Pong:
 		'''Game Driver'''
 		clock = pygame.time.Clock()
 		FPS = 120
+
 		run = True
 		while run:
 			clock.tick(FPS)
@@ -108,7 +117,7 @@ class Pong:
 
 			key_pressed = pygame.key.get_pressed()
 			self.handle_movement(key_pressed)
-			self.SCREEN.fill((0,0,0))
+			self.SCREEN.fill(BLACK)
 			self.draw_center_border()
 			self.paddle_L.draw(self.SCREEN)
 			self.paddle_R.draw(self.SCREEN)
